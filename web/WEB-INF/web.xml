@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <filter>
+        <filter-name>FilterConf</filter-name>
+        <filter-class>controller.FilterConf</filter-class>
+        <init-param>
+            <param-name>construction</param-name>
+            <param-value>yes</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>FilterConf</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>stu_logserv</servlet-name>
+        <servlet-class>controller.stu_logserv</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>class_vali</servlet-name>
+        <servlet-class>controller.class_vali</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>stu_insert</servlet-name>
+        <servlet-class>controller.stu_insert</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>stu_logserv</servlet-name>
+        <url-pattern>/stu_logserv</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>class_vali</servlet-name>
+        <url-pattern>/class_vali</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>stu_insert</servlet-name>
+        <url-pattern>/stu_insert</url-pattern>
+    </servlet-mapping>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
